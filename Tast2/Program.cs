@@ -1,2 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 18: Напишите программу, которая по
+// заданному номеру четверти, показывает диапазон
+// возможных координат точек в этой четверти (x и y).
+
+Console.WriteLine("Введите номер четверти: ");
+int x = Convert.ToInt32(Console.ReadLine());
+
+string GetQuarter(int number)
+{
+    if (number ==1) return "В первой четверти находятся  X > 0 до бесконечности и Y > 0 до бесконечности";
+    if (number ==2) return "Во второй четверти находятся X < 0 до бесконечности и Y > 0 до бесконечности";
+    if (number ==3) return "В третьей четверти находятся X < 0 до бесконечности и Y < 0 до бесконечности";
+    if (number ==4) return "В четвертой четверти находятся X > 0 до бесконечности и Y < 0 до бесконечности";
+    return "Такой четверти не существует";
+}
+string result = GetQuarter(x);
+Console.WriteLine(result);
