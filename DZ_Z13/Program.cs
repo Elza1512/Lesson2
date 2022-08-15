@@ -6,4 +6,19 @@
 // 32679 -> 6
 
 
-Console.WriteLine("Hello, World!");
+Console.Write("Введите целое число: ");
+int num = int.Parse(Console.ReadLine());
+
+if (num <= 99)
+{
+    Console.WriteLine("Третьей цифры нет");
+}   
+else 
+{
+    if (num >= 1000) num /= 10;
+    int result = num % 10;
+    {
+        Console.WriteLine($"Третья цифра введенного числа {result}");
+    }
+}
+
